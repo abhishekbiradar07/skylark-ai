@@ -7,7 +7,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://skylark-backend.onrender.com/api/:path*"
+      "destination": "https://skylark-ai-1.onrender.com/api/:path*"
     }
   ]
 }
