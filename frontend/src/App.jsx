@@ -3,7 +3,6 @@ import Header from './components/Header';
 import HomePage from './pages/HomePage';
 import ChatPage from './pages/ChatPage';
 import { api } from './api';
-import './App.css';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
