@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: skylark-backend
+    env: python
+    region: oregon
+    plan: free
+    branch: main
+    buildCommand: "cd backend && pip install -r requirements.txt"
+    startCommand: "cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
+      - key: MONDAY_API_TOKEN
+        sync: false
+      - key: MONDAY_DEALS_BOARD_ID
+        value: 5030845871
+      - key: MONDAY_WORK_ORDERS_BOARD_ID
+        value: 5030845875
+      - key: GROQ_API_KEY
+        sync: false
+      - key: BACKEND_PORT
+        value: 8000
+      - key: FRONTEND_URL
+        sync: false
+      - key: CACHE_DURATION_MINUTES
+        value: 5
