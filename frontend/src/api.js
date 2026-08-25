@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const API_BASE = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? 'http://localhost:8000/api' : 'https://skylark-ai-1.onrender.com/api');
+// Force correct API URL
+const API_BASE = 'https://skylark-ai-1.onrender.com/api';
 
 console.log('API_BASE configured as:', API_BASE);
 console.log('Environment:', import.meta.env.DEV ? 'development' : 'production');
-console.log('VITE_API_URL:', import.meta.env.VITE_API_URL);
 
 export const api = {
   async getHealth() {
